@@ -43,7 +43,7 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>io.fabric8</groupId>
+				<groupId>com.spotify</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
 				<configuration>
 					<imageName>${project.name}:${project.version}</imageName>
