@@ -45,12 +45,15 @@
 			<plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.4.11</version>
 				<configuration>
+					<dockerHost>http://192.168.137.200:2376</dockerHost>
 					<imageName>${project.name}:${project.version}</imageName>
-					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
+					<dockerDirectory>src/main/docker</dockerDirectory>
 					<skipDockerBuild>false</skipDockerBuild>
 					<resources>
 						<resource>
+							<targetPath>/</targetPath>
 							<directory>${project.build.directory}</directory>
 							<include>${project.build.finalName}.jar</include>
 						</resource>
